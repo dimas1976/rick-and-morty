@@ -1,10 +1,12 @@
 .card {
   width: 30%;
   display: grid;
+  grid-auto-flow: column;
   place-items: center;
   background-color: rgb(60, 62, 68);
   border-radius: 1rem;
   color: #fff;
+  text-align: left;
 }
 
 .card__img {

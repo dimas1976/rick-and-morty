@@ -1,6 +1,7 @@
 import './style.css';
 import './utils/createElement';
 import { createElement } from './utils/createElement';
+import { createCharacterCard } from './components/character/character';
 
 const container = createElement('div', {
   className: 'appContainer',
@@ -25,6 +26,8 @@ const container = createElement('div', {
     }),
   ],
 });
+
+container.append(createCharacterCard());
 
 /*const main = document.createElement('main');
 const header = document.createElement('header');

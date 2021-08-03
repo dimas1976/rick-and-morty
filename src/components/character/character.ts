@@ -1,7 +1,7 @@
 import { createElement } from '../../utils/createElement';
 
 export function createCharacterCard() {
-  createElement('section', {
+  return createElement('section', {
     className: 'card',
     childElements: [
       createElement('img', {

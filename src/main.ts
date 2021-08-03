@@ -24,6 +24,10 @@ const container = createElement('div', {
         }),
       ],
     }),
+    createElement('div', {
+      className: 'cards',
+      childElements: [createCharacterCard()],
+    }),
   ],
 });
 
@@ -40,5 +44,4 @@ const app = document.querySelector<HTMLDivElement>('#app');
 
 if (app !== null) {
   app.append(container);
-  app.append(createCharacterCard());
 }

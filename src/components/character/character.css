@@ -1,7 +1,7 @@
 .card {
-  width: 30%;
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
   place-items: center;
   background-color: rgb(60, 62, 68);
   border-radius: 1rem;
@@ -11,6 +11,15 @@
 
 .card__img {
   border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
   width: 100%;
+  justify-self: start;
+}
+
+.content {
+  justify-self: start;
+}
+
+.content__section span {
+  display: block;
 }

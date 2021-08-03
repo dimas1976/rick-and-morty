@@ -27,8 +27,6 @@ const container = createElement('div', {
   ],
 });
 
-container.append(createCharacterCard());
-
 /*const main = document.createElement('main');
 const header = document.createElement('header');
 const title = document.createElement('h1');
@@ -42,4 +40,5 @@ const app = document.querySelector<HTMLDivElement>('#app');
 
 if (app !== null) {
   app.append(container);
+  app.append(createCharacterCard());
 }

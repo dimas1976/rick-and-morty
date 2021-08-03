@@ -22,11 +22,11 @@ const container = createElement('div', {
           className: 'main__input',
           placeholder: 'Search for a character',
         }),
+        createElement('div', {
+          className: 'cards',
+          childElements: [createCharacterCard()],
+        }),
       ],
-    }),
-    createElement('div', {
-      className: 'cards',
-      childElements: [createCharacterCard()],
     }),
   ],
 });

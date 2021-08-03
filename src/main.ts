@@ -2,9 +2,16 @@ import './style.css';
 
 const app = document.querySelector<HTMLDivElement>('#app');
 
+const main = document.createElement('main');
+const header = document.createElement('header');
+const title = document.createElement('h1');
+title.innerText = 'Hallo Rick';
+const input = document.createElement('input');
+input.placeholder = 'Enter Data';
+
+header.append(title);
+main.append(input);
+
 if (app !== null) {
-  app.innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`;
+  app.append(header, main);
 }

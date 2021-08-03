@@ -1,4 +1,5 @@
 import { createElement } from '../../utils/createElement';
+import './character.css';
 
 export function createCharacterCard() {
   return createElement('section', {
@@ -7,6 +8,7 @@ export function createCharacterCard() {
       createElement('img', {
         src: 'https://rickandmortyapi.com/api/character/avatar/92.jpeg',
         alt: '',
+        className: 'card__img',
       }),
       createElement('article', {
         className: 'content',

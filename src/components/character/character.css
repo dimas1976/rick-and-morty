@@ -1,1 +1,14 @@
-/* code */
+.card {
+  width: 30%;
+  display: grid;
+  place-items: center;
+  background-color: rgb(60, 62, 68);
+  border-radius: 1rem;
+  color: #fff;
+}
+
+.card__img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  width: 100%;
+}

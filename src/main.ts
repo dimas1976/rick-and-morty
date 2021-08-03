@@ -3,7 +3,7 @@ import './utils/createElement';
 import { createElement } from './utils/createElement';
 
 const container = createElement('div', {
-  className: 'container',
+  className: 'appContainer',
   childElements: [
     createElement('header', {
       className: 'header',

@@ -2,6 +2,15 @@
   font-family: 'Schifty';
   src: url('./assets/get_schwifty.ttf') format('truetype');
 }
+
+h1 {
+  font-size: 3rem;
+}
+
+body {
+  height: 100vh;
+  background-color: hsla(0, 0%, 62%, 1);
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,7 +19,19 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+.appContainer {
+  display: grid;
+  height: 100%;
+}
 
+header {
+  background-color: #000;
+}
 .header__heading {
   font-family: 'Schifty', sans-serif;
+  color: #fff;
+}
+
+.main {
+  padding: 2rem;
 }

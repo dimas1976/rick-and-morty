@@ -6,7 +6,7 @@ import type { Character } from './types';
 
 const character: Character = {
   name: 'Morty Smith',
-  thumbnail: '',
+  thumbnail: 'https://rickandmortyapi.com/api/character/avatar/92.jpeg',
   status: 'Alive',
   species: 'Human',
   origin: 'Earth (C-137)',

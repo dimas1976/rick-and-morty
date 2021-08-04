@@ -4,6 +4,7 @@ import type { Character } from '../../types';
 
 export function createCharacterCard({
   name,
+  thumbnail,
   status,
   species,
   origin,
@@ -12,7 +13,7 @@ export function createCharacterCard({
     className: styles['card'],
     childElements: [
       createElement('img', {
-        src: 'https://rickandmortyapi.com/api/character/avatar/92.jpeg',
+        src: thumbnail,
         alt: '',
         className: styles['card__img'],
       }),

@@ -4,13 +4,22 @@ import { createElement } from './utils/createElement';
 import { createCharacterCard } from './components/character/character';
 import type { Character } from './types';
 
-const character: Character = {
-  name: 'Morty Smith',
-  thumbnail: 'https://rickandmortyapi.com/api/character/avatar/92.jpeg',
-  status: 'Alive',
-  species: 'Human',
-  origin: 'Earth (C-137)',
-};
+const characters: Character[] = [
+  {
+    name: 'Morty Smith',
+    thumbnail: 'https://rickandmortyapi.com/api/character/avatar/92.jpeg',
+    status: 'Alive',
+    species: 'Human',
+    origin: 'Earth (C-137)',
+  },
+  {
+    name: 'Ants in my Eyes Johnson',
+    thumbnail: 'https://rickandmortyapi.com/api/character/avatar/20.jpeg',
+    status: 'unknown',
+    species: 'Human',
+    origin: 'Interdimensional Cable',
+  },
+];
 
 const container = createElement('div', {
   className: 'appContainer',
@@ -33,12 +42,9 @@ const container = createElement('div', {
         }),
         createElement('div', {
           className: 'cards',
-          childElements: [
-            createCharacterCard(character),
-            createCharacterCard(character),
-            createCharacterCard(character),
-            createCharacterCard(character),
-          ],
+          childElements: characters.map((character) =>
+            createCharacterCard(character)
+          ),
         }),
       ],
     }),

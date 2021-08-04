@@ -3,6 +3,14 @@ import './utils/createElement';
 import { createElement } from './utils/createElement';
 import { createCharacterCard } from './components/character/character';
 
+const character = {
+  name: 'Morty Smith',
+  thumbnail: '',
+  status: 'Alive',
+  species: 'Human',
+  origin: 'Earth (C-137)',
+};
+
 const container = createElement('div', {
   className: 'appContainer',
   childElements: [
@@ -25,10 +33,10 @@ const container = createElement('div', {
         createElement('div', {
           className: 'cards',
           childElements: [
-            createCharacterCard(),
-            createCharacterCard(),
-            createCharacterCard(),
-            createCharacterCard(),
+            createCharacterCard(character),
+            createCharacterCard(character),
+            createCharacterCard(character),
+            createCharacterCard(character),
           ],
         }),
       ],
@@ -36,15 +44,6 @@ const container = createElement('div', {
   ],
 });
 
-/*const main = document.createElement('main');
-const header = document.createElement('header');
-const title = document.createElement('h1');
-title.innerText = 'Rick and Morty';
-const input = document.createElement('input');
-input.placeholder = 'search for a character';
-
-header.append(title);
-main.append(input);*/
 const app = document.querySelector<HTMLDivElement>('#app');
 
 if (app !== null) {

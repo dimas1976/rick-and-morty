@@ -1,7 +1,13 @@
 import { createElement } from '../../utils/createElement';
 import './character.css';
+import type { Character } from '../../types';
 
-export function createCharacterCard(character): HTMLElement {
+export function createCharacterCard({
+  name,
+  status,
+  species,
+  origin,
+}: Character): HTMLElement {
   return createElement('section', {
     className: 'card',
     childElements: [
@@ -18,10 +24,10 @@ export function createCharacterCard(character): HTMLElement {
             childElements: [
               createElement('p', {
                 className: 'character',
-                innerText: character.name,
+                innerText: name,
                 childElements: [
                   createElement('span', {
-                    innerText: character.status + '-' + character.species,
+                    innerText: status + '-' + species,
                   }),
                 ],
               }),
@@ -35,7 +41,7 @@ export function createCharacterCard(character): HTMLElement {
                 innerText: 'Last known location',
                 childElements: [
                   createElement('span', {
-                    innerText: character.origin,
+                    innerText: origin,
                   }),
                 ],
               }),

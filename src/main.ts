@@ -2,8 +2,9 @@ import './style.css';
 import './utils/createElement';
 import { createElement } from './utils/createElement';
 import { createCharacterCard } from './components/character/character';
+import type { Character } from './types';
 
-const character = {
+const character: Character = {
   name: 'Morty Smith',
   thumbnail: '',
   status: 'Alive',

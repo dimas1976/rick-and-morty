@@ -24,7 +24,12 @@ const container = createElement('div', {
         }),
         createElement('div', {
           className: 'cards',
-          childElements: [createCharacterCard()],
+          childElements: [
+            createCharacterCard(),
+            createCharacterCard(),
+            createCharacterCard(),
+            createCharacterCard(),
+          ],
         }),
       ],
     }),

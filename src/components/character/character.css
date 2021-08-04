@@ -13,7 +13,8 @@
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   width: 100%;
-  justify-self: start;
+  height: 100%;
+  object-fit: cover;
 }
 
 .content {

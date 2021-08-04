@@ -1,5 +1,5 @@
 import { createElement } from '../../utils/createElement';
-import './character.css';
+import styles from './character.module.css';
 import type { Character } from '../../types';
 
 export function createCharacterCard({
@@ -9,21 +9,21 @@ export function createCharacterCard({
   origin,
 }: Character): HTMLElement {
   return createElement('section', {
-    className: 'card',
+    className: styles['card'],
     childElements: [
       createElement('img', {
         src: 'https://rickandmortyapi.com/api/character/avatar/92.jpeg',
         alt: '',
-        className: 'card__img',
+        className: styles['card__img'],
       }),
       createElement('article', {
-        className: 'content',
+        className: styles['content'],
         childElements: [
           createElement('div', {
-            className: 'content__section',
+            className: styles['content__section'],
             childElements: [
               createElement('p', {
-                className: 'character',
+                className: styles['character'],
                 innerText: name,
                 childElements: [
                   createElement('span', {
@@ -34,10 +34,10 @@ export function createCharacterCard({
             ],
           }),
           createElement('div', {
-            className: 'content__section',
+            className: styles['content__section'],
             childElements: [
               createElement('p', {
-                className: 'location',
+                className: styles['location'],
                 innerText: 'Last known location',
                 childElements: [
                   createElement('span', {
@@ -48,10 +48,10 @@ export function createCharacterCard({
             ],
           }),
           createElement('div', {
-            className: 'content__section',
+            className: styles['content__section'],
             childElements: [
               createElement('p', {
-                className: 'first-seen',
+                className: styles['first-seen'],
                 innerText: 'First seen in:',
                 childElements: [
                   createElement('span', {

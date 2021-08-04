@@ -1,7 +1,7 @@
 import { createElement } from '../../utils/createElement';
 import './character.css';
 
-export function createCharacterCard(): HTMLElement {
+export function createCharacterCard(character): HTMLElement {
   return createElement('section', {
     className: 'card',
     childElements: [
@@ -18,10 +18,10 @@ export function createCharacterCard(): HTMLElement {
             childElements: [
               createElement('p', {
                 className: 'character',
-                innerText: 'Davin',
+                innerText: character.name,
                 childElements: [
                   createElement('span', {
-                    innerText: 'Dead-Human',
+                    innerText: character.status + '-' + character.species,
                   }),
                 ],
               }),
@@ -35,7 +35,7 @@ export function createCharacterCard(): HTMLElement {
                 innerText: 'Last known location',
                 childElements: [
                   createElement('span', {
-                    innerText: 'Earth (C-137)',
+                    innerText: character.origin,
                   }),
                 ],
               }),

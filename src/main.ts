@@ -2,24 +2,14 @@ import './style.css';
 import './utils/createElement';
 import { createElement } from './utils/createElement';
 import { createCharacterCard } from './components/character/character';
-import type { Character } from './types';
+import type {
+  Character,
+  CharacterFromAPI,
+  AllCharactersFromAPI,
+} from './types';
+import { getCharacters } from './utils/api';
 
-const characters: Character[] = [
-  {
-    name: 'Morty Smith',
-    thumbnail: 'https://rickandmortyapi.com/api/character/avatar/92.jpeg',
-    status: 'Alive',
-    species: 'Human',
-    origin: 'Earth (C-137)',
-  },
-  {
-    name: 'Ants in my Eyes Johnson',
-    thumbnail: 'https://rickandmortyapi.com/api/character/avatar/20.jpeg',
-    status: 'unknown',
-    species: 'Human',
-    origin: 'Interdimensional Cable',
-  },
-];
+const characters: Character[] = await getCharacters();
 
 const container = createElement('div', {
   className: 'appContainer',
@@ -38,7 +28,7 @@ const container = createElement('div', {
       childElements: [
         createElement('input', {
           className: 'main__input',
-          placeholder: 'Search for a character',
+          placeholder: 'Search...',
         }),
         createElement('div', {
           className: 'cards',

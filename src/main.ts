@@ -41,7 +41,7 @@ const container = createElement('div', {
       childElements: [
         createElement('input', {
           className: 'main__input',
-          placeholder: 'Search for a character',
+          placeholder: 'Search...',
         }),
         createElement('div', {
           className: 'cards',

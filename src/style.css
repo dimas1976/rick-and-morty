@@ -40,6 +40,19 @@ header {
   padding: 2rem;
 }
 
+.main__input {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  font-size: 1.3rem;
+  background-color: transparent;
+  border: 1px solid #000;
+}
+
+.main__input::placeholder {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
 .cards {
   display: grid;
   gap: 2rem;

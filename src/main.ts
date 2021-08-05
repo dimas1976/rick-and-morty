@@ -11,6 +11,27 @@ import { getCharacters } from './utils/api';
 
 const characters: Character[] = await getCharacters();
 
+const cards = createElement('div', {
+  className: 'cards',
+  childElements: characters.map((character) => createCharacterCard(character)),
+});
+
+const input = createElement('input', {
+  className: 'main__input',
+  placeholder: 'Search...',
+  oninput: async () => {
+    cards.innerHTML = '';
+    const searchName = input.value;
+
+    const filteredCharacters = await getCharacters(searchName);
+    console.log('Filtered cards', filteredCharacters);
+    const createFilteredCharacterCards = filteredCharacters.map((character) =>
+      createCharacterCard(character)
+    );
+    cards.append(...createFilteredCharacterCards);
+  },
+});
+
 const container = createElement('div', {
   className: 'appContainer',
   childElements: [
@@ -25,18 +46,7 @@ const container = createElement('div', {
     }),
     createElement('main', {
       className: 'main',
-      childElements: [
-        createElement('input', {
-          className: 'main__input',
-          placeholder: 'Search...',
-        }),
-        createElement('div', {
-          className: 'cards',
-          childElements: characters.map((character) =>
-            createCharacterCard(character)
-          ),
-        }),
-      ],
+      childElements: [input, cards],
     }),
   ],
 });

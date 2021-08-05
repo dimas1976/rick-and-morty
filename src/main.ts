@@ -2,11 +2,7 @@ import './style.css';
 import './utils/createElement';
 import { createElement } from './utils/createElement';
 import { createCharacterCard } from './components/character/character';
-import type {
-  Character,
-  CharacterFromAPI,
-  AllCharactersFromAPI,
-} from './types';
+import type { Character } from './types';
 import { getCharacters } from './utils/api';
 
 const characters: Character[] = await getCharacters();

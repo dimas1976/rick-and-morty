@@ -1,5 +1,5 @@
 import '../types';
-import { AllCharactersFromAPI, Character, CharacterFromAPI } from '../types';
+import { AllCharactersFromAPI, Character } from '../types';
 export async function getCharacters(name?: string): Promise<Character[]> {
   const response = await fetch(
     `https://rickandmortyapi.com/api/character?name=${name ? name : ''}`
